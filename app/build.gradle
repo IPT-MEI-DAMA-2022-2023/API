@@ -34,6 +34,19 @@ android {
 
 dependencies {
 
+    // specify the use of tools that we are going to use
+    // https://square.github.io/retrofit/
+    def retrofitVersion="2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+
+    // https://github.com/google/gson
+    // the GSON will be used to convert json to Kotlin objects
+    def gsonVersion="2.10.1"
+    implementation "com.google.code.gson:gson:${gsonVersion}"
+    implementation "com.squareup.retrofit:converter-gson:${retrofitVersion}"
+
+
+
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
