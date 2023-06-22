@@ -1,8 +1,11 @@
 package pt.ipt.dama.api.retrofit.service
 
+import pt.ipt.dama.api.model.APIResult
 import pt.ipt.dama.api.model.Note
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 
 
 /**
@@ -17,6 +20,10 @@ interface NoteService {
     @GET("api/notes")
     fun listNodes(): Call<List<Note>>
 
-
+    /**
+     * function to write a new note to API
+     */
+    @POST("api/notes")
+    fun addNote(@Body note:Note):Call<APIResult>
 
 }
